@@ -1,5 +1,5 @@
 //READ THE COMMENTS TO UNDERSTAND
-//topics: String
+//topics: String, Date
 
 // 1. String
 
@@ -53,3 +53,25 @@ console.log(12 + "celcius"); //number converts to string
 console.log(12 + 10 + "celcius"); //in this case numbers will be added first then converts to string, see the note above
 
 // Replacing Sub-strings
+// replace("sub-string","replace with") & replaceAll()
+console.log(str1.replace("str", "lemon"));
+//if multiple place needed to be changed of same sub-string, use replaceAll()
+
+// Whitespace clearing
+// .trim(), .trimStart()/.trimEnd()
+let s = "   aobia   fiaj fakwe   ";
+console.log(s.trim()); //in between spaces wont be trimmed
+console.log(s.trimStart());
+console.log(s.trimEnd());
+
+// Splitting String
+// based on , or space or anything particular
+const names = "bruce, arthur, catwomen";
+console.log(names.split(",")); //will ouput in an array
+
+// 2. Date
+// finding date from the system
+const time = new Date();
+console.log(time.toString()); //will show the time that is on your device
+console.log(time.toLocaleString());
+// but this method is inconsistent, mainly in months (starts from 0=January)
